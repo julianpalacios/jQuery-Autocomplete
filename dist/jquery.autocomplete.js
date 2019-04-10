@@ -633,7 +633,7 @@
 
         suggest: function () {
             if (!this.suggestions.length) {
-                if (this.options.showNoSuggestionNotice) {
+                if (this.options.showNoSuggestionNotice && !this.disabled) {
                     this.noSuggestions();
                 } else {
                     this.hide();
