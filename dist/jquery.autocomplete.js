@@ -632,8 +632,10 @@
         },
 
         suggest: function () {
+             var that = this;
+        	
             if (!this.suggestions.length) {
-                if (this.options.showNoSuggestionNotice) {
+                if (this.options.showNoSuggestionNotice && !that.disabled) {
                     this.noSuggestions();
                 } else {
                     this.hide();
